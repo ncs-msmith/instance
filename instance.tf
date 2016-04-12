@@ -10,5 +10,5 @@ resource "aws_instance" "foo" {
 }
 
 output "ip" {
-  value = "${aws_instance.foo.*.private_ip}"
+  value = ["${aws_instance.foo.*.private_ip}"]
 }
